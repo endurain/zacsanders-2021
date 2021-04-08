@@ -11,28 +11,28 @@ export default function Posts() {
     // console.log(posts);
   return (
     <SRLWrapper>
-    <Grid container spacing={2}>
-      {posts && posts.map((post, index) => (
-      <Grid item xs={4} key={index}>
-        <Card>
-          <CardContent>
-            <Typography
-                color="textSecondary"
-                gutterBottom
-                dangerouslySetInnerHTML={{__html: post.title.rendered}} 
-            />
-            <Typography
-                variant="body2"
-                component="p"
-                dangerouslySetInnerHTML={{__html: post.content.rendered}} 
-            />
-            
-              <img src={post.better_featured_image.source_url} /> 
-          </CardContent>
-        </Card>
+      <Grid container spacing={2}>
+        {posts && posts.map((post, index) => (
+        <Grid item xs={12} md={6} lg={4} key={index}>
+          <Card>
+            <CardContent>
+              <Typography
+                  color="textSecondary"
+                  gutterBottom
+                  dangerouslySetInnerHTML={{__html: post.title.rendered}} 
+              />
+              <Typography
+                  variant="body2"
+                  component="p"
+                  dangerouslySetInnerHTML={{__html: post.content.rendered}} 
+              />
+              
+                <img src={post.better_featured_image.source_url} alt="test" /> 
+            </CardContent>
+          </Card>
+        </Grid>
+        ))}
       </Grid>
-      ))}
-    </Grid>
     </SRLWrapper>
   );
 }
