@@ -13,12 +13,14 @@ class Main extends Component {
         <Route path='/' component={Home}>
         <div>
           <h1>Simple SPA</h1>
-          <ul className="header">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/photography">Photography</NavLink></li>
-            <li><NavLink to="/contact">Contact</NavLink></li>
-          </ul>
+          <nav className="menu">
+            <ul className="header">
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink to="/photography">Photography</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
+            </ul>
+          </nav>
           <div className="content">
             <Route exact path="/" component={Home}/>
             <Route path="/about" component={About}/>
